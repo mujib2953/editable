@@ -1,5 +1,18 @@
 extends layout
 
 block content
-	h1= title
-	p Welcome to #{title}
+	p Welcome to Editable
+
+	if isSaved
+		div(class="alert alert-success" role="alert").
+			Your changes are saved successfully...
+
+	if error
+		div(class="alert alert-error" role="alert").
+			#{error}
+
+	form(action="/", method="post")
+		textarea(name="data", cols="150", rows="10").
+			#{data}
+		br
+		button(type="submit" class="btn btn-success btn-block") Save

@@ -21,14 +21,15 @@ router.get('/', function(req, res, next) {
 
 router.post("/", (req, res) => {
 	const { data } = req.body;
-
+	console.log(data);
 	try {
 		if (!data) throw new Error("No data found.");
 
 		fs.writeFile(FILE_NAME, data, (e) => {
 			if (e) throw e;
 
-			res.render("index", { data, isSaved: true });
+			// res.render("index", { data, isSaved: true });
+			res.json({ saved: true });
 		});
 
 	} catch(e) {

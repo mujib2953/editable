@@ -3,16 +3,23 @@ extends layout
 block content
 	p Welcome to Editable
 
-	if isSaved
-		div(class="alert alert-success" role="alert").
-			Your changes are saved successfully...
+	div(class="error-block")
+		if isSaved
+			div(class="alert alert-success" role="alert").
+				Your changes are saved successfully...
 
-	if error
-		div(class="alert alert-error" role="alert").
-			#{error}
+		if error
+			div(class="alert alert-error" role="alert").
+				#{error}
 
-	form(action="/", method="post")
-		textarea(name="data", cols="150", rows="10").
-			#{data}
-		br
-		button(type="submit" class="btn btn-success btn-block") Save
+	div(contenteditable="true" class="data-div").
+		!{data}
+	button(type="button" class="btn btn-success btn-block contenteditable-save") Save
+
+	//- form(action="/", method="post")
+	//- 	textarea(name="data", cols="150", rows="10").
+	//- 		#{data}
+	//- 	br
+	//- 	button(type="submit" class="btn btn-success btn-block") Save
+
+	script(src="/javascripts/custom/save.js")

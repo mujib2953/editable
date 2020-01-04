@@ -12,6 +12,24 @@ block content
 			div(class="alert alert-error" role="alert").
 				#{error}
 
+	div(class="btn-group action-bar" role="group")
+		button(type="button" class="btn btn-secondary bold-text").
+			B
+		button(type="button" class="btn btn-secondary italic-text").
+			I
+		button(type="button" class="btn btn-secondary underline-text").
+			U
+		div(class="btn-group" role="group")
+			button(id="btn1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false").
+				Dropdown
+			div(class="dropdown-menu" aria-labelledby="btn1")
+				div.
+					1
+				div.
+					2
+				div.
+					3
+
 	div(contenteditable="true" class="data-div").
 		!{data}
 	button(type="button" class="btn btn-success btn-block contenteditable-save") Save

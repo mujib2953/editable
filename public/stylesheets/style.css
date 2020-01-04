@@ -3,6 +3,8 @@ body {
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 
 	overflow: hidden;
+	background-color: #444 !important;
+	color: #eee !important;
 }
 
 a {
@@ -14,8 +16,41 @@ a {
 	padding: 5px 10px;
 	margin-bottom: 10px;
 
-	height: calc(100vh - 150px);
+	height: calc(100vh - 200px);
 	border-radius: 5px;
 
+	background-color: #777;
+
 	overflow-y: scroll;
+}
+
+.action-bar {
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.action-bar button {
+	font-weight: 550;
+}
+
+.action-bar .bold-text {
+	font-weight: 750;
+}
+
+.action-bar .italic-text {
+	font-style: italic;
+}
+
+.action-bar .underline-text::after {
+	content: "__";
+	width: 10px;
+
+	position: absolute;
+	margin-left: -13px;
+	padding-top: 2px;
+	font-weight: 550;
+}
+
+.action-bar .active {
+	color: blue;
 }

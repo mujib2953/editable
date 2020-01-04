@@ -33,6 +33,18 @@ a {
 	font-weight: 550;
 }
 
+.action-bar .active {
+	color: blue;
+}
+
+.action-bar button:hover {
+	color: #333;
+}
+
+.action-bar .active:hover {
+	color: blue;
+}
+
 .action-bar .bold-text {
 	font-weight: 750;
 }
@@ -49,8 +61,4 @@ a {
 	margin-left: -13px;
 	padding-top: 2px;
 	font-weight: 550;
-}
-
-.action-bar .active {
-	color: blue;
 }

@@ -2,7 +2,9 @@
     const actionBar = document.querySelector(".action-bar");
     const allActionButtons = actionBar.querySelectorAll("button");
     const actionLists = [
-        "bold", "italic", "underline"
+        "bold", "italic", "underline",
+
+        "formatBlock", // --- for heading tags h1-h6
     ];
 
     addEvents();
@@ -19,15 +21,20 @@
 
         target.classList.toggle("active");
 
-        if (selecetedText.type.toLowerCase() === "none") {
+        if (selecetedText.type === "None") {
             return false;
         }
 
-        const { professor: { value } } = target.attributes;
-        const hasAction = actionLists.find(act => act === value.toLowerCase());
+        const { professor: { value }, berlin } = target.attributes;
+        const hasAction = actionLists.find(act => act === value);
 
         if (hasAction) {
-            document.execCommand(value.toLowerCase());
+            
+            if (berlin.value) {
+                document.execCommand(value, false, berlin.value)
+            } else {
+                document.execCommand(value);
+            }
         }
     }
 

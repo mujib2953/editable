@@ -20,15 +20,21 @@ block content
 		button(type="button" class="btn btn-secondary underline-text" professor="underline").
 			U
 		div(class="btn-group" role="group")
-			button(id="btn1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false").
-				Dropdown
-			div(class="dropdown-menu" aria-labelledby="btn1")
-				div.
-					1
-				div.
-					2
-				div.
-					3
+			button(id="btn1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" professor="dropdown").
+				Headings
+			div(class="dropdown-menu heading-menu" aria-labelledby="btn1")
+				button(type="button" class="btn btn-secondary btn-block heading-1" professor="formatBlock" berlin="h1").
+					h1
+				button(type="button" class="btn btn-secondary btn-block heading-1" professor="formatBlock" berlin="h2").
+					h2
+				button(type="button" class="btn btn-secondary btn-block heading-1" professor="formatBlock" berlin="h3").
+					h3
+				button(type="button" class="btn btn-secondary btn-block heading-1" professor="formatBlock" berlin="h4").
+					h4
+				button(type="button" class="btn btn-secondary btn-block heading-1" professor="formatBlock" berlin="h5").
+					h5
+				button(type="button" class="btn btn-secondary btn-block heading-1" professor="formatBlock" berlin="h6").
+					h6
 
 	div(contenteditable="true" class="data-div").
 		!{data}

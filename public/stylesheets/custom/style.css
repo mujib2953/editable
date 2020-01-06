@@ -62,3 +62,7 @@ a {
 	padding-top: 2px;
 	font-weight: 550;
 }
+
+.action-bar .heading-menu {
+	padding: 5px;
+}

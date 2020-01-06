@@ -66,3 +66,7 @@ a {
 .action-bar .heading-menu {
 	padding: 5px;
 }
+
+.action-bar .strike-throgh-text {
+	text-decoration: line-through;
+}

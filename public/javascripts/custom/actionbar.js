@@ -5,6 +5,7 @@
         "bold", "italic", "underline",
 
         "formatBlock", // --- for heading tags h1-h6
+        "strikeThrough",
     ];
 
     addEvents();
@@ -19,7 +20,7 @@
         const { target } = e;
         const selecetedText = window.getSelection();
 
-        target.classList.toggle("active");
+        // target.classList.toggle("active");
 
         if (selecetedText.type === "None") {
             return false;
@@ -30,7 +31,7 @@
 
         if (hasAction) {
             
-            if (berlin.value) {
+            if (berlin && berlin.value) {
                 document.execCommand(value, false, berlin.value)
             } else {
                 document.execCommand(value);

@@ -6,6 +6,10 @@
 
         "formatBlock", // --- for heading tags h1-h6
         "strikeThrough",
+
+        "foreColor",
+
+        "backColor",
     ];
 
     addEvents();

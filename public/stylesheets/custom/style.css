@@ -63,7 +63,9 @@ a {
 	font-weight: 550;
 }
 
-.action-bar .heading-menu {
+.action-bar .heading-menu,
+.action-bar .font-color-menu,
+.action-bar .background-color-menu {
 	padding: 5px;
 }
 

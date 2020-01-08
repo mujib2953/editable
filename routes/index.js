@@ -21,7 +21,6 @@ router.get('/', function(req, res, next) {
 
 router.post("/", (req, res) => {
 	const { data } = req.body;
-	console.log(data);
 	try {
 		if (!data) throw new Error("No data found.");
 

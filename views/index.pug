@@ -99,6 +99,10 @@ block content
 			UL
 		button(type="button" class="btn btn-secondary order-list" professor="insertOrderedList").
 			OL
+		button(type="button" class="btn btn-secondary image-upload" value="image")
+			.
+				image
+			input(type="file" accept=".png, .jpg, .jpeg, .gif" class="upload-image")
 
 	div(contenteditable="true" class="data-div").
 		!{data}

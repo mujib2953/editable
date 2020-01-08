@@ -72,3 +72,7 @@ a {
 .action-bar .strike-throgh-text {
 	text-decoration: line-through;
 }
+
+.action-bar .image-upload input {
+	display: none !important;
+}

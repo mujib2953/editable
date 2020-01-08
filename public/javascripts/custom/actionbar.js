@@ -1,6 +1,7 @@
 (() => {
     const actionBar = document.querySelector(".action-bar");
     const allActionButtons = actionBar.querySelectorAll("button");
+    const fileInput = actionBar.querySelector(".upload-image");
     const actionLists = [
         "bold", "italic", "underline",
 
@@ -19,8 +20,10 @@
 
     function addEvents() {
         allActionButtons.forEach(btn => {
-            btn.addEventListener("click", onActionClick, true);
+            btn.addEventListener("click", onActionClick, false);
         });
+
+        fileInput.addEventListener("change", onFileUpload, true);
     }
 
     function onActionClick(e) {
@@ -28,8 +31,12 @@
         const selecetedText = window.getSelection();
 
         // target.classList.toggle("active");
-
-        if (selecetedText.type === "None") {
+        if (target.value === "image") {
+            fileInput.click();
+            return false;
+        }
+        // --- no selection on UI
+        if (selecetedText.type === "None" || target.type === "file") {
             return false;
         }
 
@@ -43,6 +50,20 @@
             } else {
                 document.execCommand(value);
             }
+        }
+    }
+
+    function onFileUpload() {
+        if (fileInput.files.length) {
+            const fileReader = new FileReader();
+
+            fileReader.onload = () => {
+                if (typeof fileReader.result === "string") {
+                    document.execCommand("insertImage", false, fileReader.result);
+                }
+            }
+
+            fileReader.readAsDataURL(fileInput.files[0]);
         }
     }
 

@@ -10,6 +10,9 @@
         "foreColor",
 
         "backColor",
+
+        "insertUnorderedList",
+        "insertOrderedList",
     ];
 
     addEvents();

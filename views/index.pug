@@ -67,7 +67,6 @@ block content
 
 				button(type="button" class="btn btn-secondary btn-block" style="background-color: #ff3300" professor="foreColor" berlin="#ff3300")
 
-
 		div(class="btn-group" role="group")
 			button(id="btn3" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" professor="dropdown").
 				BC
@@ -96,7 +95,10 @@ block content
 
 				button(type="button" class="btn btn-secondary btn-block" style="background-color: #ff3300" professor="backColor" berlin="#ff3300")
 
-				
+		button(type="button" class="btn btn-secondary unorder-list" professor="insertUnorderedList").
+			UL
+		button(type="button" class="btn btn-secondary order-list" professor="insertOrderedList").
+			OL
 
 	div(contenteditable="true" class="data-div").
 		!{data}
